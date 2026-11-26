@@ -1,0 +1,15 @@
+[
+  "node_modules",
+  ".git",
+  ".svn",
+  ".hg",
+  "dist",
+  "build",
+  ".cache",
+  ".turbo",
+  ".next",
+  "coverage",
+  "Library",
+  "Temp",
+  "Logs"
+]

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN" data-play-origin="https://play.xsjgames.com/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="小游戏站收录原创浏览器游戏，可以在线查看和试玩。">
+  <meta name="color-scheme" content="dark">
+  <title>小游戏站 · 在线试玩</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./refresh-cloud-mail-worker.js" defer></script>
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到游戏内容</a>
+  <header class="site-head">
+    <a class="wordmark" href="./" aria-label="小游戏站首页"><span class="brand-mark" aria-hidden="true">✦</span>小游戏站</a>
+    <nav aria-label="网站导航"><a class="nav-active" href="#catalog">全部游戏</a></nav>
+    <p class="header-label">浏览器游戏合集</p>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="showroom-hero" aria-labelledby="featured-title">
+      <img class="hero-art" src="./assets/starline.webp" alt="" fetchpriority="high">
+      <div class="showroom-copy">
+        <p class="eyeline">本期精选 / 太空策略</p>
+        <h1 id="featured-title">星际拆解站</h1>
+        <p class="showroom-subtitle">再捡一件</p>
+        <p class="hero-description">驾驶打捞船穿过残骸带。把打捞来的设备塞进有限的船舱，决定继续深入，还是带着战利品返航。</p>
+        <div class="hero-actions">
+          <a id="featured-play" class="action action-primary" href="https://play.xsjgames.com/games/starline/" target="_blank" rel="noopener">开始试玩 <span aria-hidden="true">↗</span></a>
+          <a class="action action-secondary" href="#catalog">浏览全部</a>
+        </div>
+      </div>
+    </section>
+    <section id="catalog" class="showroom-catalog" aria-labelledby="catalog-title">
+      <div class="section-title"><h2 id="catalog-title">全部游戏</h2><span id="catalog-count"></span></div>
+      <div class="showroom-grid" id="game-grid"></div>
+      <noscript><p>启用 JavaScript 后可以浏览全部游戏和操作说明。</p></noscript>
+    </section>
+  </main>
+  <footer class="site-foot"><span>小游戏站</span><a href="#main">返回顶部 ↑</a></footer>
+  <dialog id="game-detail" class="game-detail" aria-labelledby="detail-title"></dialog>
+</body>
+</html>

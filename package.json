@@ -1,0 +1,16 @@
+{
+  "name": "xsjgames-website",
+  "private": true,
+  "scripts": {
+    "scan:static": "node scripts/scan-static-web.mjs",
+    "pack:static": "python scripts/pack-static.py"
+  },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "dompurify": "3.5.0",
+    "mime": "4.1.2",
+    "parse5": "8.1.1",
+    "playwright-core": "1.65.1",
+    "three": "0.128.0"
+  }
+}

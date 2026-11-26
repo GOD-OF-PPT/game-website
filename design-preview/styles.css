@@ -1,0 +1,181 @@
+:root {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-synthesis: none;
+  --serif: "Noto Serif CJK SC", "Songti SC", SimSun, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--surface); }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--focus, #5387fd); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, p, figure { margin: 0; }
+main:focus { outline: none; }
+.skip { position: fixed; z-index: 20; top: 10px; left: 10px; padding: 12px; background: #fff; color: #161616; transform: translateY(-150%); }
+.skip:focus { transform: none; }
+.site-head, main, .site-foot { width: min(100% - 96px, 1312px); margin-inline: auto; }
+.site-head { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 24px; }
+.wordmark { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-weight: 800; letter-spacing: .04em; }
+.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 9px; font-size: 21px; }
+.site-nav { font-size: 14px; }
+.site-nav a { display: inline-block; padding: 10px 0; }
+.site-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); margin-top: 64px; padding: 22px 0 96px; color: var(--muted); font-size: 12px; }
+.eyeline { font-size: 12px; font-weight: 700; letter-spacing: .13em; }
+.cover-frame { display: block; overflow: hidden; }
+.cover { width: 100%; height: 100%; object-fit: cover; }
+.game-card { width: 100%; padding: 0; text-align: start; background: none; border: 0; }
+.game-card .cover-frame { aspect-ratio: 16 / 9; }
+.game-card .cover { transition: transform 220ms ease; }
+.game-card:hover .cover { transform: scale(1.04); }
+.card-body { display: flex; justify-content: space-between; align-items: center; padding: 13px 0 15px; gap: 8px; }
+.card-text { display: grid; gap: 6px; }
+.card-text strong { font-size: 16px; }
+.card-tag { color: var(--muted); font-size: 12px; }
+.card-arrow { font-size: 21px; align-self: start; }
+.section-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.section-title h2 { font-size: clamp(23px, 3vw, 32px); }
+.section-title > span { color: var(--muted); font-size: 12px; }
+.action { display: inline-flex; align-items: center; justify-content: center; min-height: 47px; padding: 11px 21px; border-radius: 8px; border: 1px solid transparent; font-size: 14px; font-weight: 800; white-space: nowrap; transition: filter 150ms ease; }
+.action:hover { filter: brightness(1.16); }
+
+/* A · Featured showroom */
+body[data-variant="A"] { --surface: #0c1018; --ink: #f1f5fb; --muted: #a6b0c3; --line: #293242; --focus: #98b7ff; }
+[data-variant="A"] .site-head { min-height: 75px; }
+[data-variant="A"] .brand-mark { background: #466dfe; }
+[data-variant="A"] .nav-active { color: #d5e1ff; border-bottom: 1px solid #7192ff; }
+.header-label { color: var(--muted); font-size: 13px; }
+.showroom-hero { position: relative; display: grid; align-items: center; min-height: 500px; padding: 58px clamp(32px, 5vw, 77px); overflow: hidden; isolation: isolate; border: 1px solid #344567; border-radius: 17px; background: #0d1834; }
+.hero-art { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 53%; }
+.showroom-hero::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #0b142a 3%, #0b142aea 23%, #0a122265 52%, #0a122206 76%), linear-gradient(0deg, #11182b6e, transparent 40%); }
+.showroom-copy { max-width: 410px; }
+.showroom-copy .eyeline { color: #a9bcff; }
+.showroom-copy h1 { margin-top: 21px; font-size: clamp(38px, 5.4vw, 76px); font-weight: 900; line-height: 1.1; letter-spacing: -.06em; }
+.showroom-subtitle { margin-top: 10px; color: #d6e1ff; font-size: clamp(22px, 3vw, 38px); font-weight: 500; letter-spacing: .05em; }
+.hero-description { max-width: 330px; margin-top: 21px; color: #c0cbe1; font-size: 15px; line-height: 1.8; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.action-primary { background: #8da9ff; color: #0b1734; }
+.action-secondary { border-color: #a8bcf46b; background: #13203966; }
+.showroom-catalog { margin-top: 39px; }
+.showroom-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; }
+.showroom-grid .cover-frame { border-radius: 10px; border: 1px solid #2b3243; }
+.showroom-grid .card-arrow { color: #a6bdff; }
+
+/* B · Printed game journal */
+body[data-variant="B"] { --surface: #f5efe1; --ink: #241e1a; --muted: #655a50; --line: #bcad97; --focus: #a32418; }
+[data-variant="B"] .site-head { border-bottom: 1px solid #9b8973; min-height: 77px; }
+[data-variant="B"] .wordmark { font-family: var(--serif); }
+[data-variant="B"] .brand-mark { border-radius: 50%; background: #9e3729; color: #fff4d9; border: 3px double #f4dbad; font-size: 16px; }
+[data-variant="B"] .site-nav { color: #842d24; font-weight: 700; }
+.magazine-headline { font-family: var(--serif); letter-spacing: .22em; color: #68594b; }
+.magazine-lead { display: grid; grid-template-columns: minmax(0, 0.67fr) minmax(0, 1.6fr); gap: 48px; align-items: center; padding: 35px 0 31px; border-bottom: 3px double #aa9b84; }
+.magazine-heading { padding: 18px 0 18px 20px; }
+.magazine-heading .eyeline { display: flex; align-items: center; gap: 10px; color: #932f24; }
+.magazine-heading .eyeline::before { content: ""; width: 24px; height: 1px; background: currentColor; }
+.magazine-heading h1 { margin: 22px 0 20px; font-family: var(--serif); font-weight: 900; font-size: clamp(68px, 8vw, 120px); line-height: .96; letter-spacing: -.08em; }
+.magazine-description { max-width: 270px; font-size: 15px; color: #655348; line-height: 1.85; }
+.magazine-action { margin-top: 20px; padding: 8px 0 5px; background: none; color: #842d24; border: 0; border-bottom: 1px solid #842d24; font-weight: 800; }
+.magazine-action:hover { color: #b23724; }
+.magazine-figure .cover { aspect-ratio: 16 / 9; }
+.magazine-figure figcaption { display: flex; justify-content: space-between; gap: 10px; padding-top: 12px; color: #655548; font-size: 12px; }
+.magazine-catalog { margin-top: 28px; }
+.magazine-catalog h2 { font-family: var(--serif); }
+.magazine-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }
+.magazine-grid .card-body { border-bottom: 1px solid var(--line); }
+.magazine-grid .card-text strong { font-family: var(--serif); font-size: 19px; }
+.magazine-grid .card-arrow { color: #842d24; }
+
+/* C · Arcade game selector */
+body[data-variant="C"] { --surface: #171321; --ink: #f2edf7; --muted: #c4b7cf; --line: #44364d; --focus: #d0ef86; }
+[data-variant="C"] .site-head { border-bottom: 1px solid var(--line); min-height: 73px; }
+[data-variant="C"] .brand-mark { color: #222917; background: #c8ef80; border-radius: 4px; }
+[data-variant="C"] .nav-active { color: #d4f49b; }
+.arcade-headline { color: var(--muted); font-size: 13px; }
+.arcade-title { display: flex; align-items: baseline; gap: 22px; margin: 29px 0 24px; }
+.arcade-title h1 { font-size: clamp(29px, 4.2vw, 57px); line-height: 1.14; letter-spacing: -.045em; }
+.arcade-title > span { color: var(--muted); font-size: 14px; }
+.arcade-layout { display: grid; gap: 24px; grid-template-columns: minmax(235px, 300px) minmax(0, 1fr); align-items: start; }
+.arcade-catalog { display: grid; gap: 8px; }
+.arcade-station { display: grid; grid-template-columns: 58px minmax(0, 1fr) 18px; align-items: center; gap: 11px; min-height: 68px; padding: 9px 11px; width: 100%; border: 1px solid #473752; border-radius: 7px; background: #221a2d; text-align: left; }
+.arcade-station:hover { background: #2c2336; }
+.arcade-station[aria-pressed="true"] { border-color: #c8ef80; background: #c8ef801a; }
+.arcade-station img { border-radius: 3px; aspect-ratio: 4 / 3; object-fit: cover; }
+.station-copy { display: grid; gap: 5px; }
+.station-copy strong { font-size: 15px; }
+.station-copy > span { color: var(--muted); font-size: 11px; }
+.station-arrow { color: #cff08b; justify-self: end; font-size: 23px; }
+.arcade-screen { background: #251c2f; border: 1px solid #574660; border-radius: 12px; overflow: hidden; }
+.monitor-bar { display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 7px 17px; color: #d1c2dc; font-size: 12px; }
+.monitor-on { display: flex; align-items: center; gap: 7px; font-weight: 700; letter-spacing: .08em; }
+.monitor-on::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #c8ef80; }
+.monitor-image { background: #0e0d16; border-block: 1px solid #4c3d59; }
+.monitor-image img { aspect-ratio: 16 / 8; object-fit: cover; }
+.monitor-control { display: flex; justify-content: space-between; align-items: center; gap: 22px; padding: 20px 22px; }
+.monitor-info h2 { margin-top: 5px; font-size: clamp(23px, 3vw, 33px); }
+.monitor-info .eyeline { color: #d0eea0; }
+.monitor-description { margin-top: 8px; color: #d8cde0; font-size: 14px; line-height: 1.65; }
+.arcade-action { border-radius: 4px; background: #c8ef80; color: #202914; }
+
+.switcher { position: fixed; z-index: 5; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 3px; width: max-content; max-width: calc(100% - 20px); padding: 5px; background: #11151cf5; border: 1px solid #616873; border-radius: 40px; color: #edf1f5; box-shadow: 0 5px 24px #0006; }
+.switcher button { min-height: 38px; padding: 0 12px; border-radius: 30px; border: 0; background: transparent; font-size: 12px; font-weight: 700; }
+.switcher button:hover { background: #343944; }
+.switcher button[aria-current="true"] { background: #edf1f5; color: #181c25; }
+.switcher .switch-arrow { width: 35px; padding: 0; font-size: 22px; line-height: 1; }
+.game-detail { width: min(720px, 100% - 32px); max-height: calc(100% - 32px); padding: 0; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); color: var(--ink); }
+.game-detail::backdrop { background: #000b; }
+.detail-close { position: absolute; right: 12px; top: 12px; width: 40px; height: 40px; color: #fff; background: #15151eea; border: 1px solid #a5a5af; border-radius: 50%; font-size: 24px; line-height: 1; }
+.detail-art { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #10131d; }
+.detail-body { padding: 23px 26px 26px; }
+.detail-body .eyeline, .preview-note { color: var(--muted); }
+.detail-body h2 { margin: 8px 0 11px; font-size: 32px; }
+.detail-copy { line-height: 1.65; }
+.preview-note { margin-top: 18px; font-size: 13px; }
+
+@media (max-width: 1050px) {
+  .site-head, main, .site-foot { width: min(100% - 48px, 1312px); }
+  .showroom-hero { min-height: 450px; }
+  .magazine-lead { gap: 26px; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); }
+  .magazine-heading { padding-left: 0; }
+  .arcade-layout { grid-template-columns: minmax(205px, 25%) minmax(0, 1fr); gap: 15px; }
+}
+
+@media (max-width: 720px) {
+  .site-head, main, .site-foot { width: calc(100% - 32px); }
+  .site-head, [data-variant] .site-head { min-height: 63px; gap: 8px; }
+  .site-head .header-label, .magazine-headline, .arcade-headline { display: none; }
+  .showroom-hero { min-height: 480px; align-items: end; padding: 22px; }
+  .hero-art { object-position: 68% center; }
+  .showroom-hero::after { background: linear-gradient(0deg, #0b142a 8%, #0b142adf 34%, #0b142a23 78%); }
+  .showroom-copy h1 { margin-top: 12px; }
+  .hero-description { margin-top: 11px; }
+  .hero-actions { margin-top: 16px; }
+  .showroom-catalog { margin-top: 28px; }
+  .showroom-grid, .magazine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 14px; }
+  .magazine-lead { grid-template-columns: 1fr; gap: 18px; padding-top: 15px; }
+  .magazine-heading { grid-row: 2; padding: 3px 0 0; }
+  .magazine-heading h1 { margin: 12px 0; font-size: clamp(37px, 9vw, 64px); letter-spacing: -.04em; }
+  .magazine-heading h1 br { display: none; }
+  .magazine-description { max-width: none; }
+  .magazine-figure { grid-row: 1; }
+  .arcade-title { display: grid; gap: 6px; margin: 23px 0 17px; }
+  .arcade-layout { grid-template-columns: minmax(0, 1fr); gap: 13px; }
+  .arcade-catalog { display: flex; overflow-x: auto; padding: 4px 4px 8px; }
+  .arcade-station { min-width: 142px; grid-template-columns: 37px 1fr; min-height: 55px; gap: 7px; padding: 7px; }
+  .station-copy strong { font-size: 12px; }
+  .station-arrow { display: none; }
+  .monitor-control { align-items: flex-start; padding: 14px; flex-direction: column; gap: 11px; }
+  .monitor-image img { aspect-ratio: 16 / 9; }
+  .site-foot { margin-top: 40px; }
+}
+
+@media (max-width: 370px) {
+  .switch-name { display: none; }
+  .switcher button { min-width: 38px; }
+  .showroom-hero { padding: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}

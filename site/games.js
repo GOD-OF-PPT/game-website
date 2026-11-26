@@ -1,0 +1,15 @@
+export const games = [
+  { id: 'starline', title: '星际拆解站', subtitle: '再捡一件', genre: '太空策略', device: '键鼠', cover: 'starline-cover', screen: 'starline-play', description: '驾驶打捞船穿过残骸带。把打捞来的设备塞进有限的船舱，决定继续深入，还是带着战利品返航。' },
+  { id: 'chenyaun-v2', title: '剑阵万象', subtitle: '尘缘问道', genre: '动作冒险', device: '键鼠', screen: 'chenyaun-v2-play', description: '从一场山雨踏入修仙世界，在走位、剑招和阵法之间寻找破局之法。' },
+  { id: 'tdk', title: '月海信标', subtitle: '星区中继战役', genre: '机甲塔防', device: '鼠标或触控', screen: 'tdk-play', description: '在月海搭建防御阵列，搭配机甲与军械，守住星区的中继信标。' },
+  { id: 'fire-zombie', title: '棱镜蜂群', subtitle: '霓虹协议', genre: '跑酷射击', device: '鼠标或触控', description: '左右拖动小队冲过霓虹干线，穿过增益门扩大队伍，迎战区域首领。' },
+  { id: 'kong-rpg', title: '劫火重燃', subtitle: '西游动作 RPG', genre: '动作冒险', device: '键鼠', screen: 'kong-rpg-play', description: '操作悟空、哪吒或杨戬一路闯关，以不同的武器与连招迎战妖将。' },
+  { id: 'reborn-2020', title: '重生 2020', subtitle: 'AI 时代', genre: '经营模拟', device: '鼠标', description: '带着未来的记忆回到 2020 年，在工作、投资和创业中安排好自己的时间。' },
+  { id: 'wizzard', title: '奇术茶馆', subtitle: 'Wizzard', genre: '牌桌策略', device: '鼠标或触控', description: '在魔法茶馆的牌桌上预测自己能赢几墩，再用手中的牌兑现判断。' },
+  { id: 'sanguo', title: '三国：都市战纪', subtitle: '模块化版', genre: '3D 动作', device: '键盘', description: '在赛博国风街区选择一位武将，搭配招式和架势打过一场场战斗。' },
+  { id: 'shie', title: '三国：都市战纪 3D', subtitle: '单文件版', genre: '3D 动作', device: '键盘', description: '从选将开始穿过 3D 都市街区，完成三关 Boss 战。' },
+  { id: 'sword-led', title: '锤下求生', subtitle: '薪火剑心录', genre: '锻造策略', device: '鼠标', description: '推着小炉车上路，锤炼剑格、剑脊和剑尖，为同伴守住炉火。' },
+  { id: 'mota-xiyou', title: '大圣：舍利魔塔', subtitle: '西游策略冒险', genre: '解谜策略', device: '键盘或鼠标', description: '在十八层魔塔中规划路线、计算战损，把散落的舍利逐一寻回。' },
+  { id: 'chenyuan-wendao', title: '尘缘问道', subtitle: 'Web 修仙 RPG', genre: '角色扮演', device: '鼠标', description: '从凡尘开局，在探索、功法和人生选择中踏上修行之路。' },
+  { id: 'splendor', title: '璀璨宝石', subtitle: 'Splendor Web 版', genre: '多人桌游', device: '鼠标', description: '开房与朋友同桌，收集宝石、购买发展卡，率先累积足够的声望。' },
+];

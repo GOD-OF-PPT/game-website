@@ -1,0 +1,105 @@
+:root {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--surface); }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--focus, #5387fd); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, p, figure { margin: 0; }
+main:focus { outline: none; }
+.skip { position: fixed; z-index: 20; top: 10px; left: 10px; padding: 12px; background: #fff; color: #161616; transform: translateY(-150%); }
+.skip:focus { transform: none; }
+.site-head, main, .site-foot { width: min(100% - 96px, 1312px); margin-inline: auto; }
+.site-head { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 24px; }
+.wordmark { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-weight: 800; letter-spacing: .04em; }
+.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 9px; font-size: 21px; }
+.site-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); margin-top: 64px; padding: 22px 0 96px; color: var(--muted); font-size: 12px; }
+.eyeline { font-size: 12px; font-weight: 700; letter-spacing: .13em; }
+.cover-frame { display: block; overflow: hidden; }
+.cover { width: 100%; height: 100%; object-fit: cover; }
+.game-card { width: 100%; padding: 0; text-align: start; background: none; border: 0; }
+.game-card .cover-frame { aspect-ratio: 16 / 9; }
+.game-card .cover { transition: transform 220ms ease; }
+.game-card:hover .cover { transform: scale(1.04); }
+.card-body { display: flex; justify-content: space-between; align-items: center; padding: 13px 0 15px; gap: 8px; }
+.card-text { display: grid; gap: 6px; }
+.card-text strong { font-size: 16px; }
+.card-tag { color: var(--muted); font-size: 12px; }
+.card-arrow { font-size: 21px; align-self: start; }
+.section-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.section-title h2 { font-size: clamp(23px, 3vw, 32px); }
+.section-title > span { color: var(--muted); font-size: 12px; }
+.action { display: inline-flex; align-items: center; justify-content: center; min-height: 47px; padding: 11px 21px; border-radius: 8px; border: 1px solid transparent; font-size: 14px; font-weight: 800; white-space: nowrap; transition: filter 150ms ease; }
+.action:hover { filter: brightness(1.16); }
+
+body { --surface: #0c1018; --ink: #f1f5fb; --muted: #a6b0c3; --line: #293242; --focus: #98b7ff; }
+.site-head { min-height: 75px; }
+.brand-mark { background: #466dfe; }
+.nav-active { color: #d5e1ff; border-bottom: 1px solid #7192ff; }
+.header-label { color: var(--muted); font-size: 13px; }
+.showroom-hero { position: relative; display: grid; align-items: center; min-height: 500px; padding: 58px clamp(32px, 5vw, 77px); overflow: hidden; isolation: isolate; border: 1px solid #344567; border-radius: 17px; background: #0d1834; }
+.hero-art { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 53%; }
+.showroom-hero::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #0b142a 3%, #0b142aea 23%, #0a122265 52%, #0a122206 76%), linear-gradient(0deg, #11182b6e, transparent 40%); }
+.showroom-copy { max-width: 410px; }
+.showroom-copy .eyeline { color: #a9bcff; }
+.showroom-copy h1 { margin-top: 21px; font-size: clamp(38px, 5.4vw, 76px); font-weight: 900; line-height: 1.1; letter-spacing: -.06em; }
+.showroom-subtitle { margin-top: 10px; color: #d6e1ff; font-size: clamp(22px, 3vw, 38px); font-weight: 500; letter-spacing: .05em; }
+.hero-description { max-width: 330px; margin-top: 21px; color: #c0cbe1; font-size: 15px; line-height: 1.8; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.action-primary { background: #8da9ff; color: #0b1734; }
+.action-secondary { border-color: #a8bcf46b; background: #13203966; }
+.showroom-catalog { margin-top: 39px; }
+.showroom-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; }
+.showroom-grid .cover-frame { border-radius: 10px; border: 1px solid #2b3243; }
+.showroom-grid .card-arrow { color: #a6bdff; }
+
+.game-detail { width: min(720px, 100% - 32px); max-height: calc(100% - 32px); padding: 0; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); color: var(--ink); }
+.game-detail::backdrop { background: #000b; }
+.detail-close { position: absolute; right: 12px; top: 12px; width: 40px; height: 40px; color: #fff; background: #15151eea; border: 1px solid #a5a5af; border-radius: 50%; font-size: 24px; line-height: 1; }
+.detail-art { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #10131d; }
+.detail-body { padding: 23px 26px 26px; }
+.detail-body .eyeline { color: var(--muted); }
+.detail-body h2 { margin: 8px 0 11px; font-size: 32px; }
+.detail-copy { line-height: 1.65; }
+
+
+.site-head nav { font-size: 14px; }
+.site-head nav a { display: inline-block; padding: 10px 0; }
+.action { gap: 9px; }
+.site-foot { padding-bottom: 38px; }
+.detail-subtitle { color: var(--muted); margin-bottom: 12px; }
+.detail-body .action { margin-top: 20px; }
+
+@media (max-width: 1050px) {
+  .site-head, main, .site-foot { width: min(100% - 48px, 1312px); }
+  .showroom-hero { min-height: 450px; }
+}
+
+@media (max-width: 720px) {
+  .site-head, main, .site-foot { width: calc(100% - 32px); }
+  .site-head { min-height: 63px; gap: 8px; }
+  .header-label { display: none; }
+  .showroom-hero { min-height: 480px; align-items: end; padding: 22px; }
+  .hero-art { object-position: 68% center; }
+  .showroom-hero::after { background: linear-gradient(0deg, #0b142a 8%, #0b142adf 34%, #0b142a23 78%); }
+  .showroom-copy h1 { margin-top: 12px; }
+  .hero-description { margin-top: 11px; }
+  .hero-actions { margin-top: 16px; }
+  .showroom-catalog { margin-top: 28px; }
+  .showroom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 14px; }
+  .site-foot { margin-top: 40px; }
+}
+
+@media (max-width: 370px) {
+  .showroom-hero { padding: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
